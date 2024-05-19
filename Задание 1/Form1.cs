@@ -30,7 +30,11 @@ namespace Задание_1
 
         public void next (int n)
         {   
-            
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+
             label1.Text = (n+1) + "/15";
 
             string[] right_answers = {
@@ -126,6 +130,17 @@ namespace Задание_1
             seclect = 4;
         }
 
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (n > 0)
+            {
+                n--;
+                next(n);
+            }
+            if (right > 0)
+            {
+                right--;
+            }
+        }
     }
 }
